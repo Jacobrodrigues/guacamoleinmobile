@@ -1,14 +1,20 @@
 void main() {
-  saudacoes();
-
-  String data = agora();
-  print(data);
+  saudacoes("Jacob Rodrigues", MostrarAgora: false);
+  saudacoes('sophia', sep: 'K');
+//  String data = agora();
+//  print(data);
 }
 
-void saudacoes() {
-  print('Saudações do Jacob');
+//[] - parametros opcionais posicionais - a ordem importa
+//void saudacoes(String nome, [bool MostrarAgora = true, String sep = '*']) {
+//{} - parametros opcionais nomenais - a ordem não importa porém necessita a tag
+void saudacoes(String nome, {bool MostrarAgora = true, String sep = '*'}) {
+  print(sep * 20);
+  print('Saudações do $nome');
   print('seja bem-vindo!');
-  print('AGORA : ${agora()}');
+  if (MostrarAgora) {
+    print('AGORA : ${agora()}');
+  }
 }
 
 String agora() {
