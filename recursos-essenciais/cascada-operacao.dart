@@ -1,11 +1,6 @@
 void main() {
   List<String> nomes = [];
 
-  nomes
-    ..add('Jacob')
-    ..add('Neto')
-    ..remove('Jacob');
-
   print(nomes);
 }
 
